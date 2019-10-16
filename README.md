@@ -6,7 +6,7 @@ Password Manager adalah sebuah aplikasi penyimpan password. Dalam cara kerjanya,
 ## About
 >Notice : This project is created for education purpose at Universitas Indonesia.
 
-Program ini dibuat oleh:  
+Program ini dibuat oleh kelompok 5:  
 -Ridho Maulana - 1706985363  
 -Muhamad Istikhori - 1706036923
 
