@@ -12,7 +12,7 @@ Program ini dibuat oleh:
 Program dapat dicompile menggunakan GCC dengan menaruh semua file di dalam sebuah folder.
 
 ## Usage
-Pastikan file "data_pass_1.txt", "data_pass_1.txt", "data_pass_1.txt" berada dalam folder hasil compile program.  
+Pastikan file "data_pass_1.txt", "data_pass_2.txt", "data_pass_3.txt" berada dalam folder hasil compile program.  
 Jika anda ingin membuat password admin baru hilangkan file "pass_admin.txt". Password default adalah "password".
 
 Saat program pertama dijalankan dan file "pass_admin.txt" tidak ada, maka anda akan diminta membuat password admin baru.  
@@ -55,7 +55,7 @@ fungsi ini mengecheck hash dari key yang berasal dari password inputan dengan ha
 Ini merupakan fungsi dari menu utama yang menampilkan akun dan password yang tersimpan dari berkas penyimpan akun dan password tersebut. Pada menu terdapat 3 sheet yang dapat digunakan untuk menyimpan password berserta nama dari akunnya.Selain 3 sheet data yang bisa diisi terdapat opsi pilihan keluar aplikasi pada menu utama ini. User dapat beraktivitas dengan memilih menu yang tersedia berupa 3 sheet data dan 1 opsi keluar aplikasi yang penomorannya berurutan. User dapat memilih opsi 1 untuk mengubah data sheet 1 dan seterusnya dan nomor 4 untuk keluar aplikasi. Disini terdapat error handling yang mana user tidak mungkin dapat memasukan input selain opsi yang di menu.
 
 `void dapatkanPass(char *nama, BYTE *pass, int nomor)`  
-Mendapatkan password yang masih dienkripsi dari file "data_pass_1.txt", "data_pass_1.txt", atau "data_pass_1.txt".
+Mendapatkan password yang masih dienkripsi dari file "data_pass_1.txt", "data_pass_2.txt", atau "data_pass_3.txt".
 
 `void decryptPassword(BYTE *pass, BYTE *key)`  
 Fungsi ini bertujuan mendekripsi password yang sudah seblumnya diambil dari berkas menggunakan algorima DES dan key yang sudah didapatkan sebelumnya.
