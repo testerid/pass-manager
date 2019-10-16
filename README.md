@@ -4,7 +4,8 @@ Simple password manager with simple encryption
 Password Manager adalah sebuah aplikasi penyimpan password. Dalam cara kerjanya, aplikasi ini menggunakan algoritma DES dengan sebuah key untuk enkripsi password yang ada. Key yang digunakan oleh algoritma DES berasal dari HASH password admin menggunakan algoritma SHA1.
 
 ## About
->This project is created for education purpose at Universitas Indonesia.  
+>Notice : This project is created for education purpose at Universitas Indonesia.
+
 Program ini dibuat oleh:  
 -Ridho Maulana - 1706985363  
 -Muhamad Istikhori - 1706036923
