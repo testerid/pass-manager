@@ -9,7 +9,8 @@ Program ini dibuat oleh:
 -Muhamad Istikhori - 1706036923
 
 ## Installation
-Program dapat dicompile menggunakan GCC dengan menaruh semua file di dalam sebuah folder.
+Program dapat dicompile menggunakan GCC dengan menaruh semua file di dalam sebuah folder.  
+Atau tersedia project file yang dapat dibuka dengan program "Dev C++" untuk windows yang berada dalam folder compiled, serta terdapat hasil compilenya untuk windows berupa "Pass_Manager.exe".
 
 ## Usage
 Pastikan file "data_pass_1.txt", "data_pass_2.txt", "data_pass_3.txt" berada dalam folder hasil compile program.  
