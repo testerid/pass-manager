@@ -1,3 +1,6 @@
+/*
+   Credits to Brad Conte for his crypto-algorithms. sha1 and des library.
+*/
 #include <stdio.h>
 #include <memory.h>
 #include <string.h>
