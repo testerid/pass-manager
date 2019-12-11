@@ -20,7 +20,7 @@
 /*********************** FUNCTION DEFINITIONS ***********************/
 void sha1_transform(SHA1_CTX *ctx, const BYTE data[])
 {
-	WORD a, b, c, d, e, i, j, t, m[80];
+	WORAD a, b, c, d, e, i, j, t, m[80];
 
 	for (i = 0, j = 0; i < 16; ++i, j += 4)
 		m[i] = (data[j] << 24) + (data[j + 1] << 16) + (data[j + 2] << 8) + (data[j + 3]);
@@ -107,7 +107,7 @@ void sha1_update(SHA1_CTX *ctx, const BYTE data[], size_t len)
 
 void sha1_final(SHA1_CTX *ctx, BYTE hash[])
 {
-	WORD i;
+	WORAD i;
 
 	i = ctx->datalen;
 
