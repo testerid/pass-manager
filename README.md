@@ -27,6 +27,78 @@ Password manager ini hanya dapat menyimpan maksimal 3 password, dengan tiap pass
 ## Code Explanation
 Dibawah ini merupakan penjelasan utama dari setiap fungsi yang berada dalam file "main.c". Untuk penjelasan secara mendetail mengenai kerja setiap fungsi, dapat ditemukan didalam file "main.c" berupa comment pada setiap perintah yang dilakukan.
 
+`void findPassword(BYTE *key, char *kataKunci)`  
+fungsi ini bertujuan untuk mencari password yang sesuai dengan kata kunci.
+
+`int structCariNama(const void *a, const void *b)`  
+fungsi ini sebagai pembanding data untuk pencarian.
+
+`void ambilNamaPencarian(char *nama)`  
+fungsi ini bertujuan untuk mengambil kata kunci dari user untuk pencarian.
+
+`void sortPassword(BYTE *key)`  
+fungsi ini bertujuan untuk melakukan sorting daftar password.
+
+`int structCmpNama(const void *a, const void *b)`  
+fungsi ini sebagai pembanding data untuk sorting.
+
+`void printStruct(struct pass_struct *array, size_t panjang)`  
+fungsi ini bertujuan untuk menampilkan hasil sorting.
+
+`void hapusFileNamaPass(int nomor)`  
+fungsi ini bertujuan untuk menghapus nama file password dari list nama di dalam file list.
+
+`void tambahFileNamaPass(int nomor)`  
+fungsi ini bertujuan untuk menambahkan nama file password dari list nama di dalam file list.
+
+`void dapatkanFileNamaPass()`  
+fungsi ini bertujuan untuk mendapatkan daftar nama file password yang tersimpan di dalam file list.
+
+`void requeNama()`  
+fungsi ini bertujuan untuk mengulang queue.
+
+`void enqueNama(char *namaFile)`  
+fungsi ini bertujuan untuk menyimpan nama file password dalam queue.
+
+`void queueNama(char *nama, int posisi)`  
+fungsi ini bertujuan untuk mendapatkan nama file dalam queue pada posisi queue tertentu.
+
+`int panjangQueueNama()`  
+fungsi ini bertujuan untuk mendapatkan panjang queue.
+
+`void reque()`  
+fungsi ini bertujuan untuk mengulang queue.
+
+`void enque(BYTE data)`  
+fungsi ini bertujuan untuk menyimpan data unsigned char dari pembacaan file pada queue.
+
+`BYTE deque()`  
+fungsi ini bertujuan untuk melakukan operasi deque untuk data file.
+
+`int panjangQueue()`  
+fungsi ini bertujuan untuk mendapatkan panjang queue.
+
+`int bacaFile(char *namaFIle)`  
+fungsi ini bertujuan untuk membaca file dalam bentuk biner dan memanggil fungsi queue untuk menyimpan.
+
+`void encryptFile(char *namaFIle, BYTE *key)`  
+fungsi ini bertujuan untuk menginkripsi data yang sudah tersimpan dalam queue dan menyimpannya dalam sebuah file.
+
+`void dapatkanPathFileRaw(char *output)`  
+fungsi ini bertujuan untuk mendapatkan path dari file yang akan dienkripsi.
+
+`void convertPathFileCrypt(char *input, char *output)`  
+fungsi ini bertujuan untuk mengubah nama file input untuk ditambahkan ekstensi nama file .crypt.
+
+`void dapatkanPathFileCrypt(char *output)`  
+fungsi ini bertujuan untuk mendapatkan path dari file yang akan didekripsi.
+
+`void convertPathFileRaw(char *input, char *output)`  
+fungsi ini bertujuan untuk mengubah nama file untuk menghilangkan ekstensi .crypt.
+
+`void decryptFile(char *namaFIle, BYTE *key)`  
+fungsi ini bertujuan untuk medekripsi data yang sudah tersimpan dalam queue dan menyimpannya dalam sebuah file.
+
 `void dapatkanInputKarakter(char *output, int jumlah)`  
 fungsi ini bertujuan untuk mendapatkan input dari user berupa karakter dengan jumlah maksimum yang dapat ditentukan, dan menghasilkan output array char.
 
