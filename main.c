@@ -1,3 +1,8 @@
+/*
+   Credits to Brad Conte for his crypto-algorithms. sha1 and des library.
+   Credits to http://www.anyexample.com/programming/c/qsort__sorting_array_of_strings__integers_and_structs.xml for the sorting example
+*/
+
 #include <stdio.h>
 #include <memory.h>
 #include <string.h>

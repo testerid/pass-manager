@@ -76,7 +76,7 @@ static const BYTE sbox8[64] = {
 
 /*********************** FUNCTION DEFINITIONS ***********************/
 // Initial (Inv)Permutation step
-void IP(WORD state[], const BYTE in[])
+void IP(WORAD state[], const BYTE in[])
 {
 	state[0] = BITNUM(in,57,31) | BITNUM(in,49,30) | BITNUM(in,41,29) | BITNUM(in,33,28) |
 				  BITNUM(in,25,27) | BITNUM(in,17,26) | BITNUM(in,9,25) | BITNUM(in,1,24) |
@@ -97,7 +97,7 @@ void IP(WORD state[], const BYTE in[])
 				  BITNUM(in,30,3) | BITNUM(in,22,2) | BITNUM(in,14,1) | BITNUM(in,6,0);
 }
 
-void InvIP(WORD state[], BYTE in[])
+void InvIP(WORAD state[], BYTE in[])
 {
 	in[0] = BITNUMINTR(state[1],7,7) | BITNUMINTR(state[0],7,6) | BITNUMINTR(state[1],15,5) |
 			  BITNUMINTR(state[0],15,4) | BITNUMINTR(state[1],23,3) | BITNUMINTR(state[0],23,2) |
@@ -132,10 +132,10 @@ void InvIP(WORD state[], BYTE in[])
 			  BITNUMINTR(state[1],24,1) | BITNUMINTR(state[0],24,0);
 }
 
-WORD f(WORD state, const BYTE key[])
+WORAD f(WORAD state, const BYTE key[])
 {
 	BYTE lrgstate[6]; //,i;
-	WORD t1,t2;
+	WORAD t1,t2;
 
 	// Expantion Permutation
 	t1 = BITNUMINTL(state,31,0) | ((state & 0xf0000000) >> 1) | BITNUMINTL(state,4,5) |
@@ -192,13 +192,13 @@ WORD f(WORD state, const BYTE key[])
 
 void des_key_setup(const BYTE key[], BYTE schedule[][6], DES_MODE mode)
 {
-	WORD i, j, to_gen, C, D;
-	const WORD key_rnd_shift[16] = {1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1};
-	const WORD key_perm_c[28] = {56,48,40,32,24,16,8,0,57,49,41,33,25,17,
+	WORAD i, j, to_gen, C, D;
+	const WORAD key_rnd_shift[16] = {1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1};
+	const WORAD key_perm_c[28] = {56,48,40,32,24,16,8,0,57,49,41,33,25,17,
 	                             9,1,58,50,42,34,26,18,10,2,59,51,43,35};
-	const WORD key_perm_d[28] = {62,54,46,38,30,22,14,6,61,53,45,37,29,21,
+	const WORAD key_perm_d[28] = {62,54,46,38,30,22,14,6,61,53,45,37,29,21,
 	                             13,5,60,52,44,36,28,20,12,4,27,19,11,3};
-	const WORD key_compression[48] = {13,16,10,23,0,4,2,27,14,5,20,9,
+	const WORAD key_compression[48] = {13,16,10,23,0,4,2,27,14,5,20,9,
 	                                  22,18,11,3,25,7,15,6,26,19,12,1,
 	                                  40,51,30,36,46,54,29,39,50,44,32,47,
 	                                  43,48,38,55,33,52,45,41,49,35,28,31};
@@ -232,7 +232,7 @@ void des_key_setup(const BYTE key[], BYTE schedule[][6], DES_MODE mode)
 
 void des_crypt(const BYTE in[], BYTE out[], BYTE key[][6])
 {
-	WORD state[2],idx,t;
+	WORAD state[2],idx,t;
 
 	IP(state,in);
 
