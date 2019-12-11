@@ -3,6 +3,8 @@ Simple password manager with simple encryption
 
 Password Manager adalah sebuah aplikasi penyimpan password. Dalam cara kerjanya, aplikasi ini menggunakan algoritma DES dengan sebuah key untuk enkripsi password yang ada. Key yang digunakan oleh algoritma DES berasal dari HASH password admin menggunakan algoritma SHA1.
 
+Password Manager ini mempunyai fitur tambahan berupa enkripsi dan dekripsi sebuah file. File tersebut diproteksi dengan password utama program ini.
+
 ## About
 >Notice : This project is created for education purpose at Universitas Indonesia.
 
@@ -15,14 +17,20 @@ Program dapat dicompile menggunakan GCC dengan menaruh semua file di dalam sebua
 Atau tersedia project file yang dapat dibuka dengan program "Dev C++" untuk windows yang berada dalam folder compiled, serta terdapat hasil compilenya untuk windows berupa "Pass_Manager.exe".
 
 ## Usage
-Pastikan file "data_pass_1.txt", "data_pass_2.txt", "data_pass_3.txt" berada dalam folder hasil compile program.  
+Pastikan file "data_pass.txt", "data_pass_1.txt", "data_pass_2.txt", "data_pass_3.txt" berada dalam folder hasil compile program.  
 Jika anda ingin membuat password admin baru hilangkan file "pass_admin.txt". Password default adalah "password".
 
 Saat program pertama dijalankan dan file "pass_admin.txt" tidak ada, maka anda akan diminta membuat password admin baru.  
 Setelah membuat password admin baru, anda akan diminta login menggunakan password admin yang baru anda buat, atau password default admin adalah "password" (jika tidak membuat password baru).  
 Setelah itu password tersimpan akan ditampilkan dan anda dapat mengubah password tersimpan tersebut.
 
-Password manager ini hanya dapat menyimpan maksimal 3 password, dengan tiap password menggunakan maksimal 10 karakter pengenal, dan 16 karakter password.
+Password manager ini hanya dapat menyimpan maksimal 9 password, dengan tiap password menggunakan maksimal 10 karakter pengenal, dan 16 karakter password.
+
+Untuk fitur find pass anda dapat memasukan karakter dalam huruf besar atau kecil, karena tidak sensitif terhadap huruf kapital.
+
+Untuk fitur enkripsi atau dekripsi file masukan path file sesuai contoh yang ada.
+
+Perhatian pada saat dekripsi, hasilnya akan disimpan pada path yang sama, sehingga apabila ada file yang bernama sama akan ditimpa dengan file baru hasil dekripsi.
 
 ## Code Explanation
 Dibawah ini merupakan penjelasan utama dari setiap fungsi yang berada dalam file "main.c". Untuk penjelasan secara mendetail mengenai kerja setiap fungsi, dapat ditemukan didalam file "main.c" berupa comment pada setiap perintah yang dilakukan.
